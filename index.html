@@ -13,7 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
-    <title>Document</title>
+    <title>MQTT over Web Socket</title>
 </head>
 
 <body>
@@ -22,6 +22,7 @@
     <br><br>
     <div class="container">
         <div class="row">
+            <!-- container for the broker -->
             <div class="col-sm-4" id="col">
                 <div id="brokerbox" class="border border-primary rounded">
                     <div class="panel panel-info">
@@ -46,6 +47,7 @@
                     </div>
                 </div>
             </div>
+            <!-- container for the publisher -->
             <div class="col-sm-4" id="col">
                 <div id="brokerbox" class="border border-primary rounded">
                     <div class="panel panel-info">
@@ -67,6 +69,7 @@
                     </div>
                 </div>
             </div>
+            <!-- container for the subscriber -->
             <div class="col-sm-4" id="col">
                 <div id="brokerbox" class="border border-primary rounded">
                     <div class="panel panel-info">
@@ -91,6 +94,7 @@
 
     <div class="container">
         <div class="row">
+            <!-- table for the incoming messages -->
             <div class="col-sm-4">
                 <div id="brokerbox" class="border border-primary rounded">
                     <div class="panel panel-info">
@@ -116,6 +120,7 @@
                     </div>
                 </div>
             </div>
+            <!-- table for the published messages -->
             <div class="col-sm-4">
                 <div id="brokerbox" class="border border-primary rounded">
                     <div class="panel panel-info">
@@ -140,6 +145,7 @@
                     </div>
                 </div>
             </div>
+            <!-- table for the subscribed messages -->
             <div class="col-sm-4">
                 <div id="brokerbox" class="border border-primary rounded">
                     <div class="panel panel-info">
@@ -166,7 +172,7 @@
         </div>
     </div>
 
-
+    <!-- conneccting the scripts -->
     <script src="browserMqtt.js"></script>
     <script src="mqtt.js"></script>
 

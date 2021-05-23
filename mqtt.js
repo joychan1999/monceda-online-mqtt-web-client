@@ -1,4 +1,6 @@
+// connecting to the broker
 $("#connect").on('click', function() {
+    // changing the status when connected to the broker
     $('#status').val("Connecting....")
     client = mqtt.connect($('#broker').val())
 
@@ -6,10 +8,10 @@ $("#connect").on('click', function() {
         $('#status').val("Connected!")
     })
 
-
+// getting the value of tpic and the payload
     topic = $("#topic").val()
     message = $('#payload').val()
-
+//prepending the messages to the  table
     client.on('message', function(topic, message) {
         var date = new Date()
         var time = (date.toDateString() + " " + date.toLocaleTimeString())
