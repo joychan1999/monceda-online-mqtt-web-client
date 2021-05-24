@@ -3,8 +3,9 @@ $("#connect").on('click', function() {
     // changing the status when connected to the broker
     $('#status').val("Connecting....")
     client = mqtt.connect($('#broker').val())
+});
 
-    client.on("connect", function() {
+client.on("connect", function() {
         $('#status').val("Connected!")
     })
 
@@ -26,10 +27,9 @@ $("#connect").on('click', function() {
                 "</td><td>"
             );
         }
-    });
-});
-
-// Connecting to Publish
+        
+        
+        // Connecting to Publish
 $("#publishButton").on('click', function() {
     var pubTopic = $("#topic").val()
     var payLoad = $('#payload').val()
@@ -61,6 +61,9 @@ $("#subscribeButton").on('click', function() {
         "</td><td>"
     );
 });
+    });
+
+
 
 
 
